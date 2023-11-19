@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=main, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <div id="inputDiv">
+            <p>from</p>
+            <div>
+                <select name="inputType" id="inputType">
+                    <option value="decimal">dec</option>
+                    <option value="binary">bin</option>
+                    <option value="hex">hex</option>
+                </select>
+                <input type="text" id="input" placeholder="Enter your number here">
+                <input type="submit" value="convert" class="button">
+            </div>
+            <p id="error">input form is invalid</p>
+        </div>
+        <hr>
+        <div id="resultDiv">
+            <div id="decimalResult">
+                <input id="decimal" type="text" disabled placeholder="decimal">
+                <button id="decimalBtn"><i class="fa-regular fa-copy" data-btn="decimalInp" title="copy to clipboard"></i></button>
+            </div>
+            <div id="binaryResult">
+                <input id="binary" type="text" disabled placeholder="binary">
+                <button id="binaryBtn"><i class="fa-regular fa-copy" data-btn="binaryInp" title="copy to clipboard"></i></button>
+            </div>
+            <div id="hexResult">
+                <div>
+                    <input id="hex" type="text" disabled placeholder="hexadecimal">
+                    <button id="hexBtn"><i class="fa-regular fa-copy" data-btn="hexInp" title="copy to clipboard"></i></button>
+                </div>
+                <div>
+                    <p>
+                        do you want to convert to rgb? 
+                    </p>
+                   <i class="fa-solid fa-arrow-right-arrow-left" id="rgbConvertor"></i>
+                </div>
+            </div>
+            <div id="rgbResult">
+                <div id="btnsDiv">
+                    <button id="rButton">R</button>
+                    <button id="gButton">G</button>
+                    <button id="bButton">B</button>
+                </div>
+               <div>
+                    <input type="text" id="rgb" placeholder="rgb" disabled>
+                    <button id="rgbBtn"><i class="fa-regular fa-copy" data-btn="rgbInp" title="copy to clipboard"></i></button>
+               </div>
+            </div>
+            <button id="restart" class="button">restart</button>
+        </div>
+    </main>
+</body>
+<script src="main.js"></script>
+</html>

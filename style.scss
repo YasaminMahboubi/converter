@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@mixin flexDisplay($justifyContent: center , $alignItem: center){
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+.button{
+    background-color: #0e313d;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    &:hover{
+        color: #0e313d;
+        background-color: #66929f;
+        border: 1px solid #0e313d;
+    }
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    @include flexDisplay();
+    background-color: #0a2226;
+    main{
+        width: 80%;
+        height: 80%;
+        background-color: #fff;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin-top: 3rem;
+        hr{
+            width: 90%;
+            height: 2px;
+            margin-left: 10px;
+            margin-top: 30px;
+            background-color: #6e7172;
+        }
+        p{
+            font-size: 1.5rem;
+            color: #2f5460;
+        }
+    }
+}
+#inputDiv{
+    width: 100%;
+    height: 15%;
+    padding: 1rem;
+    @include flexDisplay();
+    flex-direction: column;
+    gap: 1rem;
+    #error{
+        color: red;
+        font-size: 1rem;
+        opacity: 0;
+    }
+    div{
+        width: 80%;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: .7fr 4fr .5fr;
+        input , select{
+            border: none;
+            outline: none;
+            padding: .6rem;
+            border-radius: .5rem;
+        }
+        #input{
+            border-radius: .2rem;
+            border: 1px solid #2f5460;
+            color: #66929f;
+        }
+        select{
+            background-color: #0e313d;
+            color: #fff;
+            border: 1px solid #66929f;
+            padding-left: 10px;
+        }
+        select:hover{
+            background-color: #66929f;
+            color: #0e313d;
+        }
+        input[type="submit"]{
+            position: relative;
+        }
+    }
+}
+
+#resultDiv{
+    width: 100%;
+    height: 85%;
+    padding: 1rem;
+    @include flexDisplay();
+    flex-direction: column;
+    gap: .5rem;
+    div{
+        width: 100%;
+        height: 10%;
+        @include flexDisplay();
+        gap: .5rem;
+        input{
+            width: 80%;
+            padding: .5rem;
+            border: 1px solid  #66929f;
+            color:#2f5460;
+        }
+        button{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            i {
+                background-color: transparent;
+                font-size: 1.3rem;
+
+                &:hover{
+                    color: orangered;
+                }
+            }
+        }
+    }
+    #hexResult{
+        height: 15%;
+        flex-direction: column;
+       div {
+            width: 100%;
+            height: 50%;
+            @include flexDisplay();
+            flex-direction: row;
+            gap: .5rem;
+            i:not(#hexBtn > i){
+                background-color: transparent;
+                padding: .3rem;
+                color: orangered;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+#rgbResult {
+        opacity: 0;
+        height: 20% !important;
+        flex-direction: column;
+        div{
+            width: 100%;
+            height: 50%;
+            @include flexDisplay();
+            button:not(#rgbBtn){
+                width: 26%;
+                height: 100%;
+                padding: .5rem;
+                background-color: rgba(47, 84 , 96,0.4);
+            }
+        }
+        #btnsDiv{
+            width: 80%;
+        }
+}
+@media screen and (max-width: 1000px){
+    main{
+        min-height: 90%;
+        overflow-y: auto;
+        #inputDiv{
+            height: 41%;
+                div{
+                    grid-template-columns: 1fr;
+                }
+        }
+        #resultDiv{
+            min-height: 59%;
+
+            #hexResult{
+                div {
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

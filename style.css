@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+.button {
+  background-color: #0e313d;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.button:hover {
+  color: #0e313d;
+  background-color: #66929f;
+  border: 1px solid #0e313d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a2226;
+}
+body main {
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+body main hr {
+  width: 90%;
+  height: 2px;
+  margin-left: 10px;
+  margin-top: 30px;
+  background-color: #6e7172;
+}
+body main p {
+  font-size: 1.5rem;
+  color: #2f5460;
+}
+
+#inputDiv {
+  width: 100%;
+  height: 15%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+#inputDiv #error {
+  color: red;
+  font-size: 1rem;
+  opacity: 0;
+}
+#inputDiv div {
+  width: 80%;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 0.7fr 4fr 0.5fr;
+}
+#inputDiv div input, #inputDiv div select {
+  border: none;
+  outline: none;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+}
+#inputDiv div #input {
+  border-radius: 0.2rem;
+  border: 1px solid #2f5460;
+  color: #66929f;
+}
+#inputDiv div select {
+  background-color: #0e313d;
+  color: #fff;
+  border: 1px solid #66929f;
+  padding-left: 10px;
+}
+#inputDiv div select:hover {
+  background-color: #66929f;
+  color: #0e313d;
+}
+#inputDiv div input[type=submit] {
+  position: relative;
+}
+
+#resultDiv {
+  width: 100%;
+  height: 85%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#resultDiv div {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+#resultDiv div input {
+  width: 80%;
+  padding: 0.5rem;
+  border: 1px solid #66929f;
+  color: #2f5460;
+}
+#resultDiv div button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+#resultDiv div button i {
+  background-color: transparent;
+  font-size: 1.3rem;
+}
+#resultDiv div button i:hover {
+  color: orangered;
+}
+#resultDiv #hexResult {
+  height: 15%;
+  flex-direction: column;
+}
+#resultDiv #hexResult div {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+#resultDiv #hexResult div i:not(#hexBtn > i) {
+  background-color: transparent;
+  padding: 0.3rem;
+  color: orangered;
+  font-size: 1.5rem;
+}
+
+#rgbResult {
+  opacity: 0;
+  height: 20% !important;
+  flex-direction: column;
+}
+#rgbResult div {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#rgbResult div button:not(#rgbBtn) {
+  width: 26%;
+  height: 100%;
+  padding: 0.5rem;
+  background-color: rgba(47, 84, 96, 0.4);
+}
+#rgbResult #btnsDiv {
+  width: 80%;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    min-height: 90%;
+    overflow-y: auto;
+  }
+  main #inputDiv {
+    height: 41%;
+  }
+  main #inputDiv div {
+    grid-template-columns: 1fr;
+  }
+  main #resultDiv {
+    min-height: 59%;
+  }
+  main #resultDiv #hexResult div p {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
